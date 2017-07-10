@@ -79,10 +79,10 @@ class InboxService{
             foreach ($conversations as $date => $thread){
                 foreach ($thread as $conversation){
                     if( auth()->id() == $conversation->id_to) {
-                        $users[] = \App\User::where('id', $conversation->id_from)->first();
+                        $users[] = \Evilnet\Inbox\User::where('id', $conversation->id_from)->first();
                     }
                     elseif(auth()->id() == $conversation->id_from)
-                        $users[] = \App\User::where('id', $conversation->id_to)->first();
+                        $users[] = \Evilnet\Inbox\User::where('id', $conversation->id_to)->first();
                 }
             }
             return $users;

@@ -8,6 +8,10 @@ A simple message system for laravel 5.x
 [![Latest Unstable Version](https://poser.pugx.org/evilnet/inbox/v/unstable)](https://packagist.org/packages/evilnet/inbox)
 [![License](https://poser.pugx.org/evilnet/inbox/license)](https://packagist.org/packages/evilnet/inbox)
 
+## Demo
+
+http://207.154.212.55:8000/
+
 ## Install
 
 #### Via Composer
