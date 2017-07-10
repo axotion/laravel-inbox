@@ -3,6 +3,10 @@
 
 A simple message system for laravel 5.x
 
+[![Latest Stable Version](https://poser.pugx.org/evilnet/inbox/v/stable)](https://packagist.org/packages/evilnet/inbox)
+[![Total Downloads](https://poser.pugx.org/evilnet/inbox/downloads)](https://packagist.org/packages/evilnet/inbox)
+[![Latest Unstable Version](https://poser.pugx.org/evilnet/inbox/v/unstable)](https://packagist.org/packages/evilnet/inbox)
+[![License](https://poser.pugx.org/evilnet/inbox/license)](https://packagist.org/packages/evilnet/inbox)
 
 ## Install
 
@@ -26,6 +30,7 @@ Evilnet\Inbox\InboxServiceProvider::class
 * After that type 
 ```
 php artisan vendor:publish --tag=migrations 
+php artisan migrate
 ```
 
 #### Done
