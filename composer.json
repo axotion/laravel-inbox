@@ -3,8 +3,9 @@
     "type": "library",
     "description": "Simple messaging system for Laravel",
     "keywords": [
-        "evilnet",
-        "inbox"
+        "laravel",
+        "inbox",
+		"laravel-inbox"
     ],
     "homepage": "https://github.com/axotion/Inbox",
     "license": "MIT",

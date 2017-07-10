@@ -13,7 +13,7 @@ A simple message system for laravel 5.x
 #### Via Composer
 
 ``` bash
-$ composer require evilnet/inbox
+composer require evilnet/inbox
 ```
 
 * or manually add  
@@ -40,14 +40,13 @@ php artisan migrate
 There are predefined routes:
  ``` 
  Route::get('conversation', 'Evilnet\Inbox\InboxController@create');
- 
-    Route::post('conversation', 'Evilnet\Inbox\InboxController@store');
-    Route::get('conversation/{id}', 'Evilnet\Inbox\InboxController@show');
-    Route::post('message/{id}', 'Evilnet\Inbox\InboxController@addMessage');
-    Route::get('inbox', 'Evilnet\Inbox\InboxController@index')->name('inbox');
-    Route::delete('/conversation/{id}', '\Evilnet\Inbox\InboxController@destroy');
+ Route::post('conversation', 'Evilnet\Inbox\InboxController@store');
+ Route::get('conversation/{id}', 'Evilnet\Inbox\InboxController@show');
+ Route::post('message/{id}', 'Evilnet\Inbox\InboxController@addMessage');
+ Route::get('inbox', 'Evilnet\Inbox\InboxController@index')->name('inbox');
+ Route::delete('/conversation/{id}', '\Evilnet\Inbox\InboxController@destroy');
 ```    
-Before test it you must add implementation of auth system. Basically you can do: 
+Before test it you must add implementation of web auth system middleware. Basically you can do: 
 ```
 php artisan make:auth
 ```
@@ -55,12 +54,6 @@ php artisan make:auth
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
-
-## Testing
-
-``` bash
-$ composer test
-```
 
 ## Contributing
 
