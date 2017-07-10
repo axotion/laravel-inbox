@@ -1,4 +1,4 @@
-# larave-inbox
+# laravel-inbox
 ### It's a very early alpha of this project so be aware of bugs 
 
 A simple message system for laravel 5.x
@@ -16,7 +16,7 @@ $ composer require evilnet/inbox
 ```
 "evilnet/inbox": "dev-master"
 ```
-* to require-dev and then type composer install/update
+ to require-dev and then type composer install/update
 
 * Register new service in your app.php
 ```

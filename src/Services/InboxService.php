@@ -35,11 +35,10 @@ class InboxService{
 
     public function addConversation($user,$messg,$subject){
 
-        if($this->inboxRepository->UserExists($user)){
+        if($this->inboxRepository->userExists($user)){
             $from = auth()->id();
             $to = User::where('name', $user)->first();
-
-            if(!$this->inboxRepository->ConversationExists($to,$from)){
+            if(!$this->inboxRepository->conversationExists($to,$from)){
                 $message = new Messages();
                 $message->name = auth()->user()->name;
                 $message->message = $messg;
@@ -65,7 +64,7 @@ class InboxService{
     }
 
     public  function deleteConversation($conversation){
-
+        //it will delete conversation row and all related rows in messages table
         foreach ($conversation->messages as $messages){
             $messages->forceDelete();
         }
@@ -74,6 +73,7 @@ class InboxService{
 
 
     }
+    //return array with users that match to display for logged user
         public function getInboxUsers($conversations){
             $users = [];
             foreach ($conversations as $date => $thread){

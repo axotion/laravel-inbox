@@ -4,16 +4,14 @@ All Notable changes to `inbox` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
-## NEXT - YYYY-MM-DD
-
 ### Added
-- Nothing
+- Prevent PM to yourself
 
 ### Deprecated
 - Nothing
 
 ### Fixed
-- Nothing
+- Display inbox users
 
 ### Removed
 - Nothing
