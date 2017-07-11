@@ -14,7 +14,7 @@ class InboxServiceProvider extends ServiceProvider
     public function boot()
     {
         include __DIR__.'/routes.php';
-          $this->publishes([
+            $this->publishes([
             __DIR__ . '/migrations' => $this->app->databasePath() . '/migrations'
         ], 'migrations');
 

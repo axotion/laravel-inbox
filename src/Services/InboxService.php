@@ -12,7 +12,7 @@ use Evilnet\Inbox\Messages;
 use Evilnet\Inbox\Repository\InboxRepository;
 use Evilnet\Inbox\User;
 
-class InboxService{
+class InboxService {
 
     protected $inboxRepository;
     function __construct(InboxRepository $inboxRepository)
@@ -20,8 +20,8 @@ class InboxService{
         $this->inboxRepository = $inboxRepository;
     }
 
-    public function addMessage($request, $id){
-        if($request->get('conv_id') != $id->id){
+    public function addMessage($request, $id) {
+        if ($request->get('conv_id') != $id->id) {
             redirect()->back()->withErrors('Something went wrong...')->send();
         }
 
@@ -30,15 +30,15 @@ class InboxService{
         $a->message = $request->get('message');
         $a->conversation_id = $request->get('conv_id');
         $a->save();
-         return redirect()->back()->send();
+            return redirect()->back()->send();
     }
 
-    public function addConversation($user,$messg,$subject){
+    public function addConversation($user, $messg, $subject) {
 
-        if($this->inboxRepository->userExists($user)){
+        if ($this->inboxRepository->userExists($user)) {
             $from = auth()->id();
             $to = User::where('name', $user)->first();
-            if(!$this->inboxRepository->conversationExists($to,$from)){
+            if (!$this->inboxRepository->conversationExists($to, $from)) {
                 $message = new Messages();
                 $message->name = auth()->user()->name;
                 $message->message = $messg;
@@ -56,7 +56,7 @@ class InboxService{
         }
         }
         else{
-         return redirect()->back()->withErrors('User not found')->send();
+            return redirect()->back()->withErrors('User not found')->send();
         }
     }
     public  function fetchAllConversation(){
@@ -74,14 +74,14 @@ class InboxService{
 
     }
     //return array with users that match to display for logged user
-        public function getInboxUsers($conversations){
+        public function getInboxUsers($conversations) {
             $users = [];
-            foreach ($conversations as $date => $thread){
-                foreach ($thread as $conversation){
-                    if( auth()->id() == $conversation->id_to) {
+            foreach ($conversations as $date => $thread) {
+                foreach ($thread as $conversation) {
+                    if (auth()->id() == $conversation->id_to) {
                         $users[] = \Evilnet\Inbox\User::where('id', $conversation->id_from)->first();
                     }
-                    elseif(auth()->id() == $conversation->id_from)
+                    elseif (auth()->id() == $conversation->id_from)
                         $users[] = \Evilnet\Inbox\User::where('id', $conversation->id_to)->first();
                 }
             }

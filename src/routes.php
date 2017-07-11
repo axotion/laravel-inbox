@@ -5,7 +5,7 @@
  * Date: 09.07.2017
  * Time: 19:37
  */
-Route::group(['middleware' => ['web', 'auth']], function () {
+Route::group(['middleware' => ['web', 'auth']], function() {
     Route::get('conversation', 'Evilnet\Inbox\InboxController@create');
     Route::post('conversation', 'Evilnet\Inbox\InboxController@store');
     Route::get('conversation/{id}', 'Evilnet\Inbox\InboxController@show');

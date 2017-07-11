@@ -14,9 +14,9 @@ use Carbon\Carbon;
 
 class InboxRepository
 {
-	public function fetchAll()
+    public function fetchAll()
     {
-        return Conversation::where('id_from', auth()->id())->orderBy('id', 'desc')->orWhere('id_to', auth()->id())->orderBy('id', 'desc')->get()->groupBy(function ($data){
+        return Conversation::where('id_from', auth()->id())->orderBy('id', 'desc')->orWhere('id_to', auth()->id())->orderBy('id', 'desc')->get()->groupBy(function($data) {
             return Carbon::parse($data->created_at)->format('Y-m-d');
         });
     }
@@ -33,7 +33,7 @@ class InboxRepository
     public function conversationExists($to, $from)
     {
         //prevent to pm yourself
-        if(auth()->user()->name == $to->name){
+        if (auth()->user()->name == $to->name) {
             return true;
         }
         //check if conversation already exists
