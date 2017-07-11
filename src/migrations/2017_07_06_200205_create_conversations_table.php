@@ -13,7 +13,7 @@ class CreateConversationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('conversations', function (Blueprint $table) {
+        Schema::create('conversations', function(Blueprint $table) {
             $table->increments('id');
             $table->text('subject');
             $table->integer('id_from');

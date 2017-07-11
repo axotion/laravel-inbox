@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Conversation extends Model
 {
-    public function messages(){
+    public function messages() {
         return $this->hasMany('Evilnet\Inbox\Messages');
     }
 }

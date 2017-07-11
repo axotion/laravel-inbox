@@ -24,10 +24,10 @@ class InboxController extends Controller
     {
         $conversations = $this->inboxService->fetchAllConversation();
 
-      $users = $this->inboxService->getInboxUsers($conversations);
+        $users = $this->inboxService->getInboxUsers($conversations);
 
 
-     return view('inbox::inbox.index', compact('conversations', 'users'));
+        return view('inbox::inbox.index', compact('conversations', 'users'));
     }
     /**
      * Show the form for creating a new resource.
@@ -65,7 +65,7 @@ class InboxController extends Controller
      */
     public function show(Conversation $id)
     {
-        if(auth()->id() == $id->id_to OR auth()->id() == $id->id_from) {
+        if (auth()->id() == $id->id_to OR auth()->id() == $id->id_from) {
             return view('inbox::inbox.show')->with('conversation', $id);
         }
         return redirect()->back();
@@ -86,7 +86,7 @@ class InboxController extends Controller
                 'message' => 'required|max:10000'
             ]
         );
-        if(auth()->id() == $id->id_to OR auth()->id() == $id->id_from) {
+        if (auth()->id() == $id->id_to OR auth()->id() == $id->id_from) {
 
             $this->inboxService->addMessage($request, $id);
         }
@@ -101,7 +101,7 @@ class InboxController extends Controller
      */
     public function destroy(Conversation $id)
     {
-        if(auth()->id() == $id->id_to OR auth()->id() == $id->id_from) {
+        if (auth()->id() == $id->id_to OR auth()->id() == $id->id_from) {
 
             $this->inboxService->deleteConversation($id);
         }
