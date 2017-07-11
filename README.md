@@ -1,12 +1,14 @@
 # laravel-inbox
-### It's a very early alpha of this project so be aware of bugs 
 
 A simple message system for laravel 5.x
 
 [![Latest Stable Version](https://poser.pugx.org/evilnet/inbox/v/stable)](https://packagist.org/packages/evilnet/inbox)
-[![Total Downloads](https://poser.pugx.org/evilnet/inbox/downloads)](https://packagist.org/packages/evilnet/inbox)
 [![Latest Unstable Version](https://poser.pugx.org/evilnet/inbox/v/unstable)](https://packagist.org/packages/evilnet/inbox)
+[![Total Downloads](https://poser.pugx.org/evilnet/inbox/downloads)](https://packagist.org/packages/evilnet/inbox)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/axotion/laravel-inbox/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/axotion/laravel-inbox/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/axotion/laravel-inbox/badges/build.png?b=master)](https://scrutinizer-ci.com/g/axotion/laravel-inbox/build-status/master)
 [![License](https://poser.pugx.org/evilnet/inbox/license)](https://packagist.org/packages/evilnet/inbox)
+
 
 ## Demo
 
