@@ -10,9 +10,9 @@ A simple message system for laravel 5.x
 [![License](https://poser.pugx.org/evilnet/inbox/license)](https://packagist.org/packages/evilnet/inbox)
 
 
-## Demo
 
-http://207.154.212.55:8000/
+
+
 
 ## Install
 
