@@ -10,52 +10,9 @@ A simple message system for laravel 5.x
 [![License](https://poser.pugx.org/evilnet/inbox/license)](https://packagist.org/packages/evilnet/inbox)
 
 
+# THIS PACKAGE IS DEPRECATED
 
 
-
-
-## Install
-
-#### Via Composer
-
-``` bash
-composer require evilnet/inbox
-```
-
-* or manually add  
-```
-"evilnet/inbox": "dev-master"
-```
- to require-dev and then type composer install/update
-
-* Register new service in your app.php
-```
-Evilnet\Inbox\InboxServiceProvider::class
-```
-
-* After that type 
-```
-php artisan vendor:publish --tag=migrations 
-php artisan migrate
-```
-
-#### Done
-## Usage
-
-
-There are predefined routes:
- ``` 
- Route::get('conversation', 'Evilnet\Inbox\InboxController@create');
- Route::post('conversation', 'Evilnet\Inbox\InboxController@store');
- Route::get('conversation/{id}', 'Evilnet\Inbox\InboxController@show');
- Route::post('message/{id}', 'Evilnet\Inbox\InboxController@addMessage');
- Route::get('inbox', 'Evilnet\Inbox\InboxController@index')->name('inbox');
- Route::delete('/conversation/{id}', '\Evilnet\Inbox\InboxController@destroy');
-```    
-Before test it you must add implementation of web auth system middleware. Basically you can do: 
-```
-php artisan make:auth
-```
 
 ## Change log
 
